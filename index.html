@@ -5,33 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Миссия Недра-Эксперт</title>
+    <title>Личный кабинет</title>
     <link href="style.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
 </head>
 
 <body>
     <div class="header-mobile">
         <input class="menu-check" type="checkbox" id="menu-check-mobile">
-        <div class="header-mobile__panel">
-            <label for="menu-check-mobile" class="header-mobile__panel_burger">
+        <div class="header-mobile_panel">
+            <label for="menu-check-mobile" class="header-mobile_panel-burger">
                 <span></span>
             </label>
-            <div class="header-mobile__panel_title">
+            <div class="header-mobile_panel-title">
                 <p>поиск участков</p>
             </div>
-            <div class="header-mobile__panel_btn"></div>
+            <div class="header-mobile_panel-btn"></div>
         </div>
-        <div class="header-mobile__menu">
-            <div class="header-mobile__menu_item">
-                <div class="header-mobile__menu_item-info-logo">
+        <div class="header-mobile_menu">
+            <div class="header-mobile_menu-item">
+                <div class="header-mobile_menu-item-info-logo">
                     <a href="index.html">
                         NEDRA EXPERT
                     </a>
@@ -55,10 +49,7 @@
                 </ul>
                 <ul class="register-menu">
                     <li class="register-menu_list">
-                        <a href="/Account/Login">вход</a>
-                    </li>
-                    <li class="register-menu_list">
-                        <a href="/Account/Register">регистрация</a>
+                        <a href="index.html">личный кабинет</a>
                     </li>
                 </ul>
             </div>
@@ -66,8 +57,8 @@
     </div>
 
     <div class="header">
-        <div class="header__menu">
-            <div class="header__menu_item">
+        <div class="header_menu">
+            <div class="header_menu-item">
                 <ul>
                     <a href="https://nedraexpert.ru">
                         <div class="main-logo"></div>
@@ -92,11 +83,8 @@
                     <li class="center">
                         <a href="/assessment ">оценка</a>
                     </li>
-                    <li class="right">
-                        <a href="/Account/Login">вход</a>
-                    </li>
-                    <li class="right">
-                        <a href="/Account/Register">регистрация</a>
+                    <li class="register-menu_list">
+                        <a href="index.html">личный кабинет</a>
                     </li>
                 </ul>
             </div>
@@ -117,92 +105,115 @@
                 </ul>
             </div>
         </div>
-        <h1>Миссия Недра-Эксперт</h1>
     </div>
 
     <div class="main">
-        <div class="main__menu"></div>
-        <div class="main__container">
-            <div class="main__container_1">
-                <p>Геологическая разведка и добыча полезных ископаемых занимают значительную долю в экономике России. Особенно
-                    важное значение это имеет для развития региональной экономики и занятости жителей обширной территории
-                    России.
-                </p>
-                <p>Россия имеет развитую традицию и школу горно-геологического образования и науки. Также в отрасли занято не
-                    менее 100 тысяч специалистов-геологов, а отечественная сырьевая база оценивается более чем в сотню годовых
-                    бюджетов России. Изученность недр России одна из самых лучших в мире, покрытие геологическими картами
-                    составляет 7,6% от площади страны, и постоянно растет и уточняется.</p>
-                <p>По данным только государственного кадастра месторождений в России около 40 тысяч месторождений, около 5 тысяч
-                    проявлений полезных ископаемых и более 10 тысяч поисковых объектов.</p>
-                <p>Все это говорит о степени значимости для России горно-геологической отрасли.</p>
+        <div class="container">
+            <div>
+                <i class="star"></i>
             </div>
-            <div class="main__container_2">
-                <p class="text">Финансирование ГРР в России</p>
-                <div id="chartdiv"></div>
+            <div class="content">
+                <img src="image/empty_avatar.jpg">
             </div>
-        </div>
-        <div class="main__container">
-            <div class="main__container_2">
-                <p class="text">Объемы добычи и прироста золота</p>
-                <div id="chartdiv1"></div>
+            <div class="content fio">
+                <p>Иванов Иван Иванович</p>
             </div>
-            <div class="main__container_1">
-                <p>При этом, в развитии горно-геологической отрасли наблюдается ряд кризисных явлений:</p>
-                <p>- высокие административные риски и издержки, связанные с лицензией на пользование недрами;</p>
-                <p>- низкий уровень управления в геологоразведке и организации добычи, особенно в небольших и средних компаниях;</p>
-                <p>- недостаточный уровень обеспеченности данными, особенно на ранних стадиях геологического изучения;</p>
-                <p>- несмотря на огромное количество накопленной геологической информации, её объем и качество не дают должного
-                    эффекта на результаты работ, как в виде открытия новых месторождения, так и в сокращении затрат;</p>
-                <p>- недостаток информации ведет к необоснованным решениям, которые подрывают эффективность компании.</p>
-                <p>Геологоразведочные работы не всегда дают однозначные результаты, а инвестирование связано со значительными
-                    рисками невозврата средств. В этих условиях особенно важно соблюдение методологии при проектировании
-                    и проведении работ. Это говорит о возникшем системном информационном и организационном препятствии в
-                    развития отечественной горно-геологической отрасли.</p>
-            </div>
-        </div>
-        <div class="main__container">
-            <div class="main__container_1">
+            <div class="content soc">
                 <p>
-                    <b>Недра-Эксперт ставит своей целью:
-                        <br>
-                        <p>
-                            <b>Сделать горно-геологическую отрасль в России более открытой, менее рисковой и доступной для более
-                                широкого круга представителей бизнес-сообщества, а работу менеджеров, геологов, технологов,
-                                проектировщиков максимально удобной.</b>
-                        </p>
-                    </b>
+                    <i class="email"></i>
+                    ivanov@mail.ru
                 </p>
-                <p>Наши основные задачи, это:</p>
-                <p>1. Сконцентрировать необходимые данные о месторождениях, проявлениях, поисковых объектах, о процедурах, связанных
-                    с получением права пользования недрами в России в ближнем зарубежье;</p>
-                <p>2. Сделать доступной и удобной пользователям информацию о проведении аукционов, конкурсов и иных процедурах
-                    предоставления права пользования недрами;</p>
-                <p>3. Обеспечить преемственность накопленной геологической информации и результатов разведочных работ, а именно,
-                    определенного набора данных о них, с целью получения только новой, уточняющей информации и минимизации
-                    повторных, дублирующих работ;</p>
-                <p>4. Помочь менеджменту и специалистам компаний принять правильные и необходимые управленческие решения.</p>
+                <p class="tel">
+                    <i class="tel"></i>
+                    +7 (945) 111-22-33</p>
+                <p class="skype">
+                    <i class="skype"></i>
+                    ivanov</p>
             </div>
-            <div class="main__container_2"></div>
+            <div class="about">О себе...</div>
+        </div>
+        <div class="license">
+            <h3>Участки недр в управлении</h3>
+            <div class="subsurface item">
+                <div>
+                    <a class="bold" href="subsurface/7251/1.html">
+                        Черкесское рудное поле
+                    </a>
+                    <a href="javascript:;">
+                        Иркутская область
+                    </a>
+                    <span>
+                        золото рудное
+                    </span>
+                    <span class="separator"></span>
+                    <div class="two license">
+                        <span class="blue">
+                            ЛИЦЕНЗИЯ
+                            <br>
+                            <b>ИРК03298БР
+                            </b>
+                        </span>
+                        <a class="blue normal" href="subsurface/7251/1.html" title="ООО Общество с ограниченной ответственностью">
+                            ООО "Торговый дом Урализвесть"
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="integration">
+            <div class="container">
+                <label>Интеграция с социальными сетями и сервисами</label>
+                <div class="social">
+                    <button id="VKontakte" name="provider" value="VKontakte" data-link="" data-bind="click: socialOnClick" class="tooltip disabled tooltipstered">
+                        <i class="auth-icon vk "></i>
+                    </button>
+
+                    <button id="Odnoklassniki" name="provider" value="Odnoklassniki" data-link="" data-bind="click: socialOnClick" class="tooltip disabled tooltipstered">
+                        <i class="auth-icon ok "></i>
+                    </button>
+
+                    <button id="Facebook" name="provider" value="Facebook" data-link="" data-bind="click: socialOnClick" class="tooltip disabled tooltipstered">
+                        <i class="auth-icon fb "></i>
+                    </button>
+
+                    <button id="MoiMir" name="provider" value="MoiMir" data-link="" data-bind="click: socialOnClick" class="tooltip disabled tooltipstered">
+                        <i class="auth-icon ml "></i>
+                    </button>
+
+                    <button id="Google" name="provider" value="Google" data-link="https://plus.google.com/102216619011460489064" data-bind="click: socialOnClick"
+                        class="tooltip  tooltipstered">
+                        <i class="auth-icon gpl "></i>
+                    </button>
+
+                    <button id="Twitter" name="provider" value="Twitter" data-link="" data-bind="click: socialOnClick" class="tooltip disabled tooltipstered">
+                        <i class="auth-icon tw "></i>
+                    </button>
+
+                    <button id="Gosuslugi" name="provider" value="Gosuslugi" data-link="" data-bind="click: socialDisableOnClick" class="tooltip disabled tooltipstered">
+                        <i class="auth-icon gu  disabled"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
-
     <div class="footer">
-        <div class="footer__item">
-            <div class="footer__item_column">
-                <ul class="footer__item_column-1">
-                    <li>
+        <div class="footer_item">
+            <div class="footer_item-column">
+                <ul class="footer_item-column-1">
+                    <li class="">
                         <a href="/search">Поиск участков</a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="/ratings">Рейтинги</a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="/analytics">Аналитика</a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="/reference ">Справочники</a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="/confidential ">Политика конфиденциальности</a>
                     </li>
                     <li class="copyright">
@@ -210,8 +221,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__item_column">
-                <ul class="footer__item_column-3">
+            <div class="footer_item-column">
+                <ul class="footer_item-column-3">
                     <li class="">
                         <a href="/about-us">О нас</a>
                     </li>
@@ -229,8 +240,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__item_column">
-                <ul class="footer__item_column-3">
+            <div class="footer_item-column">
+                <ul class="footer_item-column-3">
                     <li class="li-text-color">
                         <a href="/Account/Login">Вход</a>
                     </li>
@@ -239,7 +250,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__item_column footer__item_column-4">
+            <div class="footer_item-column footer_item-column-4">
                 <p>Разработано в «Роскомпьютинг»</p>
                 <a href="http://www.roscomputing.com/ru/Main.aspx" target="_blank">
                     <img src="image/rc_logo.png" title="RosComputing">
@@ -249,9 +260,9 @@
     </div>
 
     <div class="footer-mobile">
-        <div class="footer-mobile__item">
-            <div class="footer-mobile__item_column">
-                <ul class="footer-mobile__item_column-1">
+        <div class="footer-mobile_item">
+            <div class="footer-mobile_item-column">
+                <ul class="footer-mobile_item-column-1">
                     <li class="">
                         <a href="/search">Поиск участков</a>
                     </li>
@@ -287,8 +298,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-mobile__item_column">
-                <ul class="footer-mobile__item_column-2">
+            <div class="footer-mobile_item-column">
+                <ul class="footer-mobile_item-column-2">
                     <li class="li-text-color">
                         <a href="/Account/Login">Вход</a>
                     </li>
@@ -298,7 +309,7 @@
                 </ul>
             </div>
         </div>
-        <div class="footer-mobile__item_end">
+        <div class="footer-mobile_item-end">
             <p>Разработано в «Роскомпьютинг»</p>
             <a href="http://www.roscomputing.com/ru/Main.aspx" target="_blank">
                 <img src="image/rc_logo.png" title="RosComputing">

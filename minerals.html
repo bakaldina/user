@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="RosComputing">
+        <title>Минералы</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+
+        <link href="Bundles/css%3Fv=InmRfrZKVeFWZMt4kr_-FOHkqpjvtLYQy9XFlLfZQlk1.css" rel="stylesheet"/>
+
+        <link rel="stylesheet" type="text/css" href="Content/font-awesome/fonts.css">
+        <link rel="stylesheet" type="text/css" href="Content/font-awesome/font-awesome.min.css">
+        
+    <link href="Bundles/kendo/css%3Fv=QLPlGaU9Y-Ru_m69smlHTWK7L9_avZrDufwncETs8z01.css" rel="stylesheet"/>
+
+
+        
+        
+    </head>
+
+
+<body>
+    
+<header>
+    <div>
+        <div class="menu-items">
+            <ul>
+                <a href="index.html"><div class="main-logo"></div></a>
+                <li class="menu_icon">
+                    <a href="javascript:;" id="menu_icon" onclick='$(this).closest("header").toggleClass("active"); return false;'>
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="search.html"
+                       title="Поиск">
+                        поиск участков
+                    </a>
+                </li>
+                <li>
+                    <a href="ratings.html"
+                       title="рейтинги">
+                        рейтинги
+                    </a>
+                </li>
+                <li>
+                    <a href="wip.html"
+                       title="аналитика">
+                        аналитика
+                    </a>
+                </li>
+                <li>
+                    <a href="minerals.html"
+                       title="аналитика">
+                        справочники
+                    </a>
+                </li>
+                <li>
+                    <a href="wip.html"
+                       title="оценка">
+                        оценка
+                    </a>
+                </li>
+                
+                    <li class="right">
+
+        <a href="http://nedraexpert.ru/Account/Login?returnUrl=%2Fminerals">Вход</a>
+    </li>
+    <li class="right">
+        <a href="Account/Register.html">Регистрация</a>
+    </li>
+
+            </ul>
+        </div>
+        <div class="dop_menu">
+            <ul>
+                <li class="center">
+                    <a href="wip.html">Цены</a>
+                </li>
+                <li class="center">
+                    <a href="wip.html">Карты</a>
+                </li>
+                <li class="center">
+                    <a href="wip.html">Опросы</a>
+                </li>
+                <li class="center">
+                    <a href="wip.html">Партнеры</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+        
+</header>
+
+    
+
+
+<!-- Header -->
+<section class="blue" id="filters">
+    <div class="catalogue-search-block">
+        <div>
+            <div class="h3-with-select">
+                <button type="button" data-bind="text: getSelectedMineralsTypeText, click: mineralTypeOnOpen"></button>
+                <script id="mineral-types-item-template" type="text/x-kendo-template">
+                    <li>
+                        <button data-id="#= Id #" data-bind="click: selectMinerlasType" type="button">#= Text #</button>
+                    </li>
+                </script>
+                <ul class="mineral-types" data-bind="source: mineralTypes" data-template="mineral-types-item-template"></ul>
+            </div>
+            <input placeholder="Поиск" id="mineralsSearchText" name="search" type="text" data-bind="events: { keyup: mineralsSearchTextOnKeyUp }"/>
+            <span class="count">
+                Всего:
+                <b data-bind="text: total"></b>
+            </span>
+        </div>
+        <div>
+            <div class="item">
+                <a class="data-merged-popup" href="javascript:;">Поперечносланцеватая</a>
+                <div class="popup-with-checks">
+                    <div>
+                        <ul>
+                            <li>
+                                <input id="plan-1" type="checkbox">
+                                <label for="plan-1">
+                                    Поперечносланцеватая
+                                </label>
+                            </li>
+                            <li>
+                                <input id="plan-2" type="checkbox">
+                                <label for="plan-2">
+                                    Я не знаю, как назвать
+                                </label>
+                            </li>
+                            <li>
+                                <input id="plan-3" type="checkbox">
+                                <label for="plan-3">
+                                    Я не знаю, как назвать again
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <a class="data-merged-popup" href="javascript:;">Щелочно-земельный</a>
+                <div class="popup-with-checks">
+                    <div>
+                        <ul>
+                            <li>
+                                <input id="plan-2-1" type="checkbox">
+                                <label for="plan-2-1">
+                                    Щелочно-земельный
+                                </label>
+                            </li>
+                            <li>
+                                <input id="plan-2-2" type="checkbox">
+                                <label for="plan-2-2">
+                                    Я не знаю, как назвать
+                                </label>
+                            </li>
+                            <li>
+                                <input id="plan-2-3" type="checkbox">
+                                <label for="plan-2-3">
+                                    Я не знаю, как назвать again
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button class="clear" type="button" data-bind="click: clearFilters">очистить</button>
+        </div>
+    </div>
+</section>
+
+<!-- Header -->
+
+<section class="dark-blue" id="slider">
+    <div class="catalogue-search-block minerals">
+        <button class="left" type="button">
+            <i class="icons"></i>
+        </button>
+        <script id="mineral-slider-item-template" type="text/x-kendo-template">
+            <li>
+                <a href="javascript:" data-bind="click: getThisMineral">
+                    <img alt="QQN TEXT" src="minerals.html#= Info.Sample100 #">
+                    <span>#= Info.Name #</span>
+                </a>
+            </li>
+        </script>
+        <ul data-bind="source: minerals" data-template="mineral-slider-item-template"></ul>
+        <button class="right" type="button">
+            <i class="icons"></i>
+        </button>
+    </div>
+</section>
+
+<script id="mineral-item-template" type="text/x-kendo-template">
+    # if (typeof(Info) != "undefined") {#
+    <div>
+        <div class="image-preview">
+            <a style="background-image: url('#= Info.Sample #');" href="minerals.html#= Info.Sample #" class="image-popup-link">
+                <label>
+                    <b>#= Info.Name #</b>
+                    #= Info.NameAdd #
+                </label>
+            </a>
+            <ul>
+                <li>
+                    <button data-bind="click: setShlift" class="active" data-image="#= Info.Sample #" type="button">
+                        <b>Образец</b>
+                    </button>
+                </li>
+                # if  (typeof(Info.Shlif1) != "undefined" && Info.Shlif1) {#
+                <li>
+                    <button data-bind="click: setShlift" data-image="#= Info.Shlif1 #" type="button">
+                        Шлиф а <br>(без анализатoра)
+                    </button>
+                </li>
+                # } #
+                # if  (typeof(Info.Shlif2) != "undefined" && Info.Shlif2) {#
+                <li>
+                    <button data-bind="click: setShlift" data-image="#= Info.Shlif2 #" type="button">
+                        Шлиф b <br>(c анализатором)
+                    </button>
+                </li>
+                # } #
+                # if  (typeof(Info.Shlif3) != "undefined" && Info.Shlif3) {#
+                <li>
+                    <button data-bind="click: setShlift" data-image="#= Info.Shlif3 #" type="button">
+                        Шлиф c <br>(с анализатором / без анализатора)
+                    </button>
+                </li>
+                # } #
+                # if  (typeof(Info.Map) != "undefined" && Info.Map) {#
+                <li>
+                    <button data-bind="click: setShlift" data-image="#= Info.Map #" type="button" class="">
+                        Карта
+                    </button>
+                </li>
+                # } #
+            </ul>
+        </div>
+        <div class="col-3">
+            # if (typeof(Info.Substrat) != "undefined" && Info.Substrat) {#
+            <div>
+                <label class="gray">Субстрат</label>
+                <p class="two-line-min">#= Info.Substrat #</p>
+            </div>
+            # } #
+
+            <div data-bind="visible: getVisibleClass">
+                <label class="gray">Подтип</label>
+                # if (typeof(Info.Grp) != "undefined" && Info.Grp) {#
+                <p class="two-line-min">#= Info.Grp #</p>
+                # } #
+            </div>
+
+            <div data-bind="visible: getVisibleClass" style="max-width: 30%;">
+                <label class="gray">Класс</label>
+                # if (typeof(Info.Class) != "undefined" && Info.Class) {#
+                <p class="two-line-min">#= Info.Class #</p>
+                # } #
+            </div>
+
+            # if (typeof(Info.Class) != "undefined" && Info.Class) {#
+            <div data-bind="invisible: getVisibleClass">
+                <label>Класс</label>
+                <p class="two-line-min">#= Info.Class #</p>
+            </div>
+            # } #
+
+            <div data-bind="visible: getVisibleClass">
+                <label class="gray">Подкласс</label>
+                # if (typeof(Info.Row) != "undefined" && Info.Row) {#
+                <p class="two-line-min">#= Info.Row #</p>
+                # } #
+            </div>
+
+            # if (typeof(Info.MetaType) != "undefined" && Info.MetaType) {#
+            <div style="width:33%;">
+                <label class="gray" data-bind="visible: getIsMetamorphicInfo">Тип</label>
+                <label class="gray" data-bind="visible: getIsMetasomaticInfo">Подтип</label>
+                <p class="two-line-min">#= Info.MetaType #</p>
+            </div>
+            # } #
+
+            # if (typeof(Info.Faction) != "undefined" && Info.Faction) {#
+            <div>
+                <label class="gray">Фация минер.</label>
+                <p class="two-line-min">#= Info.Faction #</p>
+            </div>
+            # } #
+            # if (typeof(Info.Formation) != "undefined" && Info.Formation) {#
+            <div>
+                <label class="gray">Фация минер.</label>
+                <p class="two-line-min">#= Info.Formation #</p>
+            </div>
+            # } #
+        </div>
+        <div class="col-2">
+            # if (typeof(Info.ChemysmGeneral) != "undefined" && Info.ChemysmGeneral) {#
+            <div>
+                <label class="gray">Химизм общий</label>
+                <p>#= Info.ChemysmGeneral #</p>
+            </div>
+            # } #
+            # if (typeof(Info.ChemysmPrivate) != "undefined" && Info.ChemysmPrivate) {#
+            <div>
+                <label class="gray">Химизм частный</label>
+                <p>#= Info.ChemysmPrivate #</p>
+            </div>
+            # } #
+        </div>
+        <div class="col-2 with-lines">
+            <div>
+                <label class="gray">Текстура</label>
+                <p>#= Info.Texture #</p>
+            </div>
+            <div>
+                <label class="gray">Структура</label>
+                <p>#= Info.Structure #</p>
+            </div>
+        </div>
+        <div>
+            <h3>Описание</h3>
+            <p class="black">
+                #= Info.Description #
+            </p>
+        </div>
+        <div>
+            <h3>Геологическая ситуация</h3>
+
+            <p class="black" data-bind="visible: getVisibleClass">
+                # if (typeof(Info.Situation) != "undefined" && Info.Situation) {#
+                #= Info.Situation #
+                # } else if (typeof(Info.GeolSit) != "undefined" && Info.GeolSit) { #
+                #= Info.GeolSit #
+                # } #
+            </p>
+            <p class="black" data-bind="invisible: getVisibleClass">
+                # if (typeof(Info.Environment) != "undefined" && Info.Environment) {#
+                #= Info.Environment #
+                # } #
+            </p>
+        </div>
+    </div>
+    <div>
+        <h3 class="mineral-composition">Минеральный состав</h3>
+        <div class="col">
+            <label class="gray">Главные</label>
+            <p>
+                #= Info.MainMinerals #
+            </p>
+        </div>
+        <div class="col">
+            <label class="gray">Второстепенные</label>
+            <p class="two-line-min">
+                #= Info.SecondMinerals #
+            </p>
+        </div>
+        <div class="col">
+            <label class="gray">Акцессорные</label>
+            <p>
+                #= Info.AccessorMinerals #
+            </p>
+        </div>
+        <div class="col-2 with-lines">
+            <div>
+                <label class="gray">ПЛОТНОСТЬ</label>
+                <p><b>#= Info.Density #</b><b class="black">г/см³</b></p>
+            </div>
+            <div>
+                <label class="gray">МАГ. ВОСПРИИМЧИВОСТЬ</label>
+                <p><b>#= Info.Magnetic #</b><b class="black">10<sup>-6</sup> ед. СИ</b></p>
+            </div>
+        </div>
+        <div>
+            <h3 class="good-sources">Полезные ископаемые</h3>
+            <p class="three-line-mine">
+                # if(typeof(Info.Useful) != "undefined" && Info.Useful) { #
+                #= Info.Useful #
+                # } else if(typeof(Info.Raw) != "undefined" && Info.Raw) { #
+                #= Info.Raw #
+                # } #
+            </p>
+        </div>
+        <div>
+            <h3 class="located">Местоположение</h3>
+            <p data-bind="invisible: getIsMetamorphicInfo">
+                #= Info.Location #
+            </p>
+            <p data-bind="visible: getIsMetamorphicInfo">
+                #= Info.Region #
+            </p>
+</div>
+        <div>
+            <h3 class="lit-sources">Список литературы</h3>
+            <p>
+                #= Info.Literature #
+            </p>
+        </div>
+        <div class="col one-line">
+            <label class="gray">Автор коллекции</label>
+            <p>#= Info.Author #</p>
+        </div>
+    </div>
+    # } #
+</script>
+<section class="clear" id="minerals">
+    <div class="mineral-detail" data-template="mineral-item-template" data-bind="source: selectedMineral"></div>
+</section>
+
+
+
+
+
+    
+    <div class="footer">
+    <div class="footer_item">
+        <div class="footer_item-column">
+            <ul class="footer_item-column-1">
+                <a href="/"><div class="main-logo"></div></a>
+                <li class="">
+                    <a href="/search">Поиск участков</a>
+                </li>
+                <li class="">
+                    <a href="/ratings">Рейтинги</a>
+                </li>
+                <li class="">
+                    <a href="/wip">Аналитика</a>
+                </li>
+                <li class="">
+                    <a href="/minerals ">Справочники</a>
+                </li>
+                <li class="">
+                    <a href="/confidential">Политика конфиденциальности</a>
+                </li>
+                <li class="copyright">
+                    © 2018 Nedra-Expert
+                </li>
+            </ul>
+        </div>
+        <div class="footer_item-column">
+            <ul class="footer_item-column-3">
+                <li class="">
+                    <a href="/about-us">О нас</a>
+                </li>
+                <li class="">
+                    <a href="/contacts">Контакты</a>
+                </li>
+                <li class="">
+                    <a href="/offer">Пользовательское соглашение</a>
+                </li>
+                <li class="li-text-color">
+                    <a href="tel:+74951158916">+7 (495) 115-8916</a>
+                </li>
+                <li class="li-text-color">
+                    <a href="mailto:info@nedraexpert.ru">info@nedraexpert.ru</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_item-column">
+            <ul class="footer_item-column-3">
+    <li class="li-text-color">
+        <a href="/Common/Account/Login?returnUrl=%2Fminerals">Вход</a>
+    </li>
+                <li class="li-text-color">
+                    <a href="/Common/Account/Register">Регистрация</a>
+                </li>            </ul>
+        </div>
+        <div class="footer_item-column footer_item-column-4">
+            <p>Разработано в «Роскомпьютинг»</p>
+            <a href="http://www.roscomputing.com/ru/Main.aspx" target="_blank">
+                <img src="/img/rc_logo.png" title="RosComputing">
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+    <script src="/js/jquery.min..js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="/Bundles/js?v=U1nUYuHqa_IdfHoY4JnsdJcHhydBMzXHf00tchZcrz41"></script>
+
+    <script type="text/javascript">
+        globalVars.consts.AbsoluteUri = 'http://nedraexpert.ru';
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#logOff").click(function () {
+                window.location.href = '/Account/LogOff';
+                return false;
+                $.ajax({
+                    url: "/Account/LogOff",
+                    type: "POST",
+                    success: function (result) {
+                        window.location.href = '/Account/Login';
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter41614544 = new Ya.Metrika({
+                        id: 41614544,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true
+                    });
+                } catch (e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/41614544" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- / -->
+    <!-- Google.Analytics counter -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-84813725-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- BEGIN JIVOSITE CODE {literal} -->
+    <script type='text/javascript'>
+        (function(){ var widget_id = 'UObduQg01H';var d=document;var w=window;function l(){
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
+    <!-- {/literal} END JIVOSITE CODE -->
+    
+    <script src="/Bundles/kendo/js?v=HlmmAd4qODamKTQWQ8bhyut6-l42yhrd3FEtdiYHPRw1"></script>
+
+    <script src="/Bundles/minerals/index?v=-3g2U7FLeGMVVbnRfWU6jvsUZSQtLtBgdTHPtQFZcf01"></script>
+
+    <script type="text/javascript">
+        var mineralTypes = [
+            {
+                Id: 0,
+                Text: "Магматические горные породы"
+            },
+            {
+                Id: 1,
+                Text: "Метасоматические горные породы"
+            },
+            {
+                Id: 2,
+                Text: "Метаморфические горные породы"
+            }
+        ];
+    </script>
+
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       minerals.html');" href="#= Info.Sample #" class="image-popup-link">
+                <label>
+                    <b>#= Info.Name #</b>
+                    #= Info.NameAdd #
+                </label>
+            </a>
+            <ul>
+                <li>
+                    <button data-bind="click: setShlift" class="active" data-image="#= Info.Sample #" type="button">
+                        <b>Образец</b>
+                    </button>
+                </li>
+                # if  (typeof(Info.Shlif1) != "undefined" && Info.Shlif1) {#
+                <li>
+                    <button data-bind="click: setShlift" data-image="#= Info.Shlif1 #" type="button">
+                        Шлиф а <br>(без анализатoра)
+                    </button>
+                </li>
+                # } #
+                # if  (typeof(Info.Shlif2) != "undefined" && Info.Shlif2) {#
+                <li>
+                    <button data-bind="click: setShlift" data-image="#= Info.Shlif2 #" type="button">
+                        Шлиф b <br>(c анализатором)
+                    </button>
+                </li>
+                # } #
+                # if  (typeof(Info.Shlif3) != "undefined" && Info.Shlif3) {#
+                <li>
+                    <button data-bind="click: setShlift" data-image="#= Info.Shlif3 #" type="button">
+                        Шлиф c <br>(с анализатором / без анализатора)
+                    </button>
+                </li>
+                # } #
+                # if  (typeof(Info.Map) != "undefined" && Info.Map) {#
+                <li>
+                    <button data-bind="click: setShlift" data-image="#= Info.Map #" type="button" class="">
+                        Карта
+                    </button>
+                </li>
+                # } #
+            </ul>
+        </div>
+        <div class="col-3">
+            # if (typeof(Info.Substrat) != "undefined" && Info.Substrat) {#
+            <div>
+                <label class="gray">Субстрат</label>
+                <p class="two-line-min">#= Info.Substrat #</p>
+            </div>
+            # } #
+
+            <div data-bind="visible: getVisibleClass">
+                <label class="gray">Подтип</label>
+                # if (typeof(Info.Grp) != "undefined" && Info.Grp) {#
+                <p class="two-line-min">#= Info.Grp #</p>
+                # } #
+            </div>
+
+            <div data-bind="visible: getVisibleClass" style="max-width: 30%;">
+                <label class="gray">Класс</label>
+                # if (typeof(Info.Class) != "undefined" && Info.Class) {#
+                <p class="two-line-min">#= Info.Class #</p>
+                # } #
+            </div>
+
+            # if (typeof(Info.Class) != "undefined" && Info.Class) {#
+            <div data-bind="invisible: getVisibleClass">
+                <label>Класс</label>
+                <p class="two-line-min">#= Info.Class #</p>
+            </div>
+            # } #
+
+            <div data-bind="visible: getVisibleClass">
+                <label class="gray">Подкласс</label>
+                # if (typeof(Info.Row) != "undefined" && Info.Row) {#
+                <p class="two-line-min">#= Info.Row #</p>
+                # } #
+            </div>
+
+            # if (typeof(Info.MetaType) != "undefined" && Info.MetaType) {#
+            <div style="width:33%;">
+                <label class="gray" data-bind="visible: getIsMetamorphicInfo">Тип</label>
+                <label class="gray" data-bind="visible: getIsMetasomaticInfo">Подтип</label>
+                <p class="two-line-min">#= Info.MetaType #</p>
+            </div>
+            # } #
+
+            # if (typeof(Info.Faction) != "undefined" && Info.Faction) {#
+            <div>
+                <label class="gray">Фация минер.</label>
+                <p class="two-line-min">#= Info.Faction #</p>
+            </div>
+            # } #
+            # if (typeof(Info.Formation) != "undefined" && Info.Formation) {#
+            <div>
+                <label class="gray">Фация минер.</label>
+                <p class="two-line-min">#= Info.Formation #</p>
+            </div>
+            # } #
+        </div>
+        <div class="col-2">
+            # if (typeof(Info.ChemysmGeneral) != "undefined" && Info.ChemysmGeneral) {#
+            <div>
+                <label class="gray">Химизм общий</label>
+                <p>#= Info.ChemysmGeneral #</p>
+            </div>
+            # } #
+            # if (typeof(Info.ChemysmPrivate) != "undefined" && Info.ChemysmPrivate) {#
+            <div>
+                <label class="gray">Химизм частный</label>
+                <p>#= Info.ChemysmPrivate #</p>
+            </div>
+            # } #
+        </div>
+        <div class="col-2 with-lines">
+            <div>
+                <label class="gray">Текстура</label>
+                <p>#= Info.Texture #</p>
+            </div>
+            <div>
+                <label class="gray">Структура</label>
+                <p>#= Info.Structure #</p>
+            </div>
+        </div>
+        <div>
+            <h3>Описание</h3>
+            <p class="black">
+                #= Info.Description #
+            </p>
+        </div>
+        <div>
+            <h3>Геологическая ситуация</h3>
+
+            <p class="black" data-bind="visible: getVisibleClass">
+                # if (typeof(Info.Situation) != "undefined" && Info.Situation) {#
+                #= Info.Situation #
+                # } else if (typeof(Info.GeolSit) != "undefined" && Info.GeolSit) { #
+                #= Info.GeolSit #
+                # } #
+            </p>
+            <p class="black" data-bind="invisible: getVisibleClass">
+                # if (typeof(Info.Environment) != "undefined" && Info.Environment) {#
+                #= Info.Environment #
+                # } #
+            </p>
+        </div>
+    </div>
+    <div>
+        <h3 class="mineral-composition">Минеральный состав</h3>
+        <div class="col">
+            <label class="gray">Главные</label>
+            <p>
+                #= Info.MainMinerals #
+            </p>
+        </div>
+        <div class="col">
+            <label class="gray">Второстепенные</label>
+            <p class="two-line-min">
+                #= Info.SecondMinerals #
+            </p>
+        </div>
+        <div class="col">
+            <label class="gray">Акцессорные</label>
+            <p>
+                #= Info.AccessorMinerals #
+            </p>
+        </div>
+        <div class="col-2 with-lines">
+            <div>
+                <label class="gray">ПЛОТНОСТЬ</label>
+                <p><b>#= Info.Density #</b><b class="black">г/см³</b></p>
+            </div>
+            <div>
+                <label class="gray">МАГ. ВОСПРИИМЧИВОСТЬ</label>
+                <p><b>#= Info.Magnetic #</b><b class="black">10<sup>-6</sup> ед. СИ</b></p>
+            </div>
+        </div>
+        <div>
+            <h3 class="good-sources">Полезные ископаемые</h3>
+            <p class="three-line-mine">
+                # if(typeof(Info.Useful) != "undefined" && Info.Useful) { #
+                #= Info.Useful #
+                # } else if(typeof(Info.Raw) != "undefined" && Info.Raw) { #
+                #= Info.Raw #
+                # } #
+            </p>
+        </div>
+        <div>
+            <h3 class="located">Местоположение</h3>
+            <p data-bind="invisible: getIsMetamorphicInfo">
+                #= Info.Location #
+            </p>
+            <p data-bind="visible: getIsMetamorphicInfo">
+                #= Info.Region #
+            </p>
+</div>
+        <div>
+            <h3 class="lit-sources">Список литературы</h3>
+            <p>
+                #= Info.Literature #
+            </p>
+        </div>
+        <div class="col one-line">
+            <label class="gray">Автор коллекции</label>
+            <p>#= Info.Author #</p>
+        </div>
+    </div>
+    # } #
+</script>
+<section class="clear" id="minerals">
+    <div class="mineral-detail" data-template="mineral-item-template" data-bind="source: selectedMineral"></div>
+</section>
+
+
+
+
+
+    
+    <div class="footer">
+    <div class="footer_item">
+        <div class="footer_item-column">
+            <ul class="footer_item-column-1">
+                <a href="index.html"><div class="main-logo"></div></a>
+                <li class="">
+                    <a href="search.html">Поиск участков</a>
+                </li>
+                <li class="">
+                    <a href="ratings.html">Рейтинги</a>
+                </li>
+                <li class="">
+                    <a href="wip.html">Аналитика</a>
+                </li>
+                <li class="">
+                    <a href="minerals.html">Справочники</a>
+                </li>
+                <li class="">
+                    <a href="confidential.html">Политика конфиденциальности</a>
+                </li>
+                <li class="copyright">
+                    © 2018 Nedra-Expert
+                </li>
+            </ul>
+        </div>
+        <div class="footer_item-column">
+            <ul class="footer_item-column-3">
+                <li class="">
+                    <a href="http://nedraexpert.ru/about-us">О нас</a>
+                </li>
+                <li class="">
+                    <a href="contacts.html">Контакты</a>
+                </li>
+                <li class="">
+                    <a href="offer.html">Пользовательское соглашение</a>
+                </li>
+                <li class="li-text-color">
+                    <a href="tel:+74951158916">+7 (495) 115-8916</a>
+                </li>
+                <li class="li-text-color">
+                    <a href="mailto:info@nedraexpert.ru">info@nedraexpert.ru</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_item-column">
+            <ul class="footer_item-column-3">
+    <li class="li-text-color">
+        <a href="http://nedraexpert.ru/Common/Account/Login?returnUrl=%2Fminerals">Вход</a>
+    </li>
+                <li class="li-text-color">
+                    <a href="http://nedraexpert.ru/Common/Account/Register">Регистрация</a>
+                </li>            </ul>
+        </div>
+        <div class="footer_item-column footer_item-column-4">
+            <p>Разработано в «Роскомпьютинг»</p>
+            <a href="http://www.roscomputing.com/ru/Main.aspx" target="_blank">
+                <img src="img/rc_logo.png" title="RosComputing">
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+    <script src="js/jquery.min..js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="Bundles/js%3Fv=U1nUYuHqa_IdfHoY4JnsdJcHhydBMzXHf00tchZcrz41"></script>
+
+    <script type="text/javascript">
+        globalVars.consts.AbsoluteUri = 'http://nedraexpert.ru';
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#logOff").click(function () {
+                window.location.href = '/Account/LogOff';
+                return false;
+                $.ajax({
+                    url: "/Account/LogOff",
+                    type: "POST",
+                    success: function (result) {
+                        window.location.href = '/Account/Login';
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter41614544 = new Ya.Metrika({
+                        id: 41614544,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true
+                    });
+                } catch (e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/41614544" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- / -->
+    <!-- Google.Analytics counter -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-84813725-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- BEGIN JIVOSITE CODE {literal} -->
+    <script type='text/javascript'>
+        (function(){ var widget_id = 'UObduQg01H';var d=document;var w=window;function l(){
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
+    <!-- {/literal} END JIVOSITE CODE -->
+    
+    <script src="Bundles/kendo/js%3Fv=HlmmAd4qODamKTQWQ8bhyut6-l42yhrd3FEtdiYHPRw1"></script>
+
+    <script src="Bundles/minerals/index%3Fv=-3g2U7FLeGMVVbnRfWU6jvsUZSQtLtBgdTHPtQFZcf01"></script>
+
+    <script type="text/javascript">
+        var mineralTypes = [
+            {
+                Id: 0,
+                Text: "Магматические горные породы"
+            },
+            {
+                Id: 1,
+                Text: "Метасоматические горные породы"
+            },
+            {
+                Id: 2,
+                Text: "Метаморфические горные породы"
+            }
+        ];
+    </script>
+
+</body>
+</html>

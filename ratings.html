@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <meta name="description" content="Рейтинги">
+
+        <meta name="author" content="RosComputing">
+        <title>Рейтинги</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+
+        <link href="Bundles/css%3Fv=InmRfrZKVeFWZMt4kr_-FOHkqpjvtLYQy9XFlLfZQlk1.css" rel="stylesheet"/>
+
+        <link rel="stylesheet" type="text/css" href="Content/font-awesome/fonts.css">
+        <link rel="stylesheet" type="text/css" href="Content/font-awesome/font-awesome.min.css">
+        
+    <link href="styles/ratings.css" rel="stylesheet" />
+
+        
+        
+    </head>
+
+
+<body>
+    
+<header>
+    <div>
+        <div class="menu-items">
+            <ul>
+                <a href="index.html"><div class="main-logo"></div></a>
+                <li class="menu_icon">
+                    <a href="javascript:;" id="menu_icon" onclick='$(this).closest("header").toggleClass("active"); return false;'>
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="search.html"
+                       title="Поиск">
+                        поиск участков
+                    </a>
+                </li>
+                <li>
+                    <a href="ratings.html"
+                       title="рейтинги">
+                        рейтинги
+                    </a>
+                </li>
+                <li>
+                    <a href="wip.html"
+                       title="аналитика">
+                        аналитика
+                    </a>
+                </li>
+                <li>
+                    <a href="minerals.html"
+                       title="аналитика">
+                        справочники
+                    </a>
+                </li>
+                <li>
+                    <a href="wip.html"
+                       title="оценка">
+                        оценка
+                    </a>
+                </li>
+                
+                    <li class="right">
+
+        <a href="http://nedraexpert.ru/Account/Login?returnUrl=%2Fratings">Вход</a>
+    </li>
+    <li class="right">
+        <a href="Account/Register.html">Регистрация</a>
+    </li>
+
+            </ul>
+        </div>
+        <div class="dop_menu">
+            <ul>
+                <li class="center">
+                    <a href="wip.html">Цены</a>
+                </li>
+                <li class="center">
+                    <a href="wip.html">Карты</a>
+                </li>
+                <li class="center">
+                    <a href="wip.html">Опросы</a>
+                </li>
+                <li class="center">
+                    <a href="wip.html">Партнеры</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+        
+</header>
+
+    
+<div class="container-fluid">
+    <div class="header">
+        <div class="image">
+            <img src="img/rating.png" alt="">
+        </div>
+    </div>
+
+    <div class="rating_menu">
+        <ul>
+            <li>
+                <button class="button button-1" data-toggle-text="рейтинги недропользования">рейтинги недропользования</button>
+            </li>
+            <li>
+                <button class="button button-2" data-toggle-text="рейтинг участка недр">рейтинг участка недр</button>
+            </li>
+            <li>
+                <button class="button button-3" data-toggle-text="шкала рейтинга">шкала рейтинга</button>
+            </li>
+            <li>
+                <button class="button button-4" data-toggle-text="методология">методология</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main container-1 hidden wrap">
+        <h1>Рейтинги недропользования</h1>
+        <div class="main_info">
+            <p>
+                Рейтинги играют важную роль в снижении информационной неопределенности при взаимодействии субъектов предпринимательской деятельности различных форм организации  с партнерами и клиентами. Из-за проблем асимметрии информированности и компетенции горно-геологических компаний (компаний, осуществляющих геологическое изучение недр и разведку, а также разработку месторождений) и их возможных партнеров - кредиторов, бизнес-партнеров, поставщиков и потребителей сырья возникает ситуации неблагоприятного выбора партнера (поставщика, заказчика) или заемщика.
+                Кредитор или возможный инвестор вынуждены проводить мониторинг горно-геологической компании, собирать о ней информацию, анализировать ее, прогнозировать стабильность, риски связанные с результатами проведения работ на участке проведения работ и результатами добычи полезных ископаемых.
+                Рейтинг недропользования, агрегируя известную информацию позволяет оценить состояние участка и компанию-недропользователя.
+                Рейтинг эффективности и надежности недропользования компании занимающееся геологическим изучением, разведкой и добычей полезных ископаемых в Российской Федерации разработан компанией Недра-Эксперт и представляет собой оценку эффективности, качества, способности и готовности компании своевременно и в полном объеме выполнять поиски и оценку месторождений, разведку и добычу а также свои лицензионные обязательства.
+            </p>
+            <p>Рейтинги недропользования присваиваются компаниям по шкале кредитного рейтинга используемой рейтинговыми агентствами в России, обозначаемые как и кредитный рейтинг. Это дает возможность производить адекватное сравнение компаний по оценке кредитного риска по отношению к геолого-экономической эффективности и рискам связанным геологическим изучение и освоением недр.</p>
+            <p>
+                Компания Недра-Эксперт на основе разработанной методики и собираемых данных о состоянии изученности, степени освоения участков недр и деятельности компаний (перспективных площадях, проявлениях, месторождениях) выставляет рейтинг компаниям-недропользователям, а также предоставленным в пользование участкам недр.
+                Рейтинги, присваиваемые горно-геологическим компаниям  разделяются на подтвержденные и неподтвержденные.
+                Подтвержденный рейтинг - рейтинг полученный компанией путем запроса подтверждения рейтинга. При этом рейтинг компании как может быть улучшен, так и получить более низкую  оценку.
+                Неподтвержденный рейтинг присваивается горно-геологической компании без участия в рейтинговом процессе. Неподтвержденный рейтинг основывается на собираемых данных о деятельности компании и участках недр (месторождений, перспективных проявлениях, нефтяных перспективных участках).
+            </p>
+            <p>
+                Рейтинг недропользователя, а также его активов  доступен на сайте Недра-Эксперт на страничке компании недропользователя и участка недра.
+                Подтвержденное рейтингование основывается на изучении и оценки геологической информации по участкам недр компании, информации о  результатах достигнутых компанией при геологическом изучении, разведке проектировании, строительстве добывающего комплекса и его эксплуатации. Кроме того в случае ранних стадий геологического изучения, оцениваться перспективность участка недр.
+                Также наличие подтвержденного рейтинга может выступать в качестве преимущества (независимого экспертного мнения в форме аналитического отчета) при сотрудничестве с инвестиционными компаниями, прямом долевом участии, банковском кредитовании, использовании услуг лизинговых организаций, а также подрядчиков по оказанию сервисных услуг.
+            </p>
+            <p><strong>Цели рейтинга недропользования:</strong></p>
+            <p>
+                -	оценить и предоставить информацию о состоянии горно-геологической отрасли;<br>
+                -	обеспечение участников отрасли информацией об уровне эффективности и надежности недропользования компаний;<br>
+                -	повысить уровень открытости и привлекательности компаний недропользователей для инвесторов.
+            </p>
+        </div>
+    </div>
+
+    <div class="main container-2 hidden wrap">
+        <h1>Рейтинги участка недр</h1>
+        <div class="main_info">
+            <p>Одним из основных факторов успешности и эффективности деятельности компании по геологическому изучению недр (поиски и оценка месторождений, разведка) и добыче полезных ископаемых является характеристики самого геологического образования - месторождения, проявления, поисковой площади. </p>
+            <p>Рейтинг участка недр агрегирует различные измеряемые характеристики участка недр выражаемые в таких качествах как изученность, эффективность эксплуатации, геологических и административных рисков.</p>
+            <p>Система рейтингов недропользования является математической моделью, использующей регрессионный анализ данных, а именно модель упорядоченного выбора.</p>
+            <p>Участки недр обладающие различными характеристиками ранжируются по рейтинговой шкале, положение на которой характеризует привлекательность участка недр.</p>
+        </div>
+    </div>
+
+    <div class="main container-3 hidden wrap">
+        <h1>Шкала рейтинга</h1>
+        <div class="main_info">
+            <p>
+                Информационные возможности Недра-Эксперт позволяют вести автоматизированное и полуавтоматизированное наблюдение за пользователями недр в части получения ими лицензий, прекращения прав пользования недрам, начала и проведения работ по геологическому изучению и разведки, отработки месторождений и многим другим показателям активности и результатов. В основном при проведении мониторинга компаний применяется дистанционный метод наблюдения.
+                Недра-Эксперт оценивает актив (участок недр) компании и эффективность работы компании с данным активом, а также риски потери актива в случае нарушений условий лицензий.
+            </p>
+        </div>
+        <div class="tableall-wrap">
+            <table class="rating">
+                <tbody class="rating-body">
+                    <tr class="rating-item">
+                        <th class="rating-cell rating-cell_left" width="35%">Рейтинг</th>
+                        <td class="rating-cell rating-cell_right">
+                            <p class="rating-title">Описание состояния предприятия согласно методологии «Недра-эксперт»</p>
+                        </td>
+                    </tr>
+                    <tr class="rating-item">
+                        <th class="rating-cell rating-cell_left rating-cell-choose" colspan="2" onclick="showModal()">Выбрать рейтинг <img class="rating-choose" src="img/icon.png" alt=""></th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="rating rating-tab" id="tab1">
+                <thead class="rating-body">
+                    <tr class="rating-item" id="title">
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#a-row1"><div class="rating-cell_select__item">ААА</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#a-row2"><div class="rating-cell_select__item">АА+</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#a-row3"><div class="rating-cell_select__item">АА</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#a-row4"><div class="rating-cell_select__item">АА-</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#a-row5"><div class="rating-cell_select__item">А+</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#a-row6"><div class="rating-cell_select__item">А</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#a-row7"><div class="rating-cell_select__item">А-</div></a>
+                        </td>
+                        <td class="rating-cell_select rating-cell_select__item__last" colspan="3">
+                            <a href="ratings.html#a-seeall"><div class="rating-cell_select__item rating-cell_select__item__last">Показать все</div>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody class="rating-body" id="a-seeall">
+                    <tr class="rating-pitem" id="a-row1">
+                        <th class="rating-cell rating-cell_left__info">ААА</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Исключительно высокий (наивысший) уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует<br>
+                                -	ведется освоение месторождения, <br>
+                                -	очень высокий уровень эконом. эффективности обеспечивающий поддержание кредитоспособности даже при условии появления рисков <br>
+                                -	геологических, <br>
+                                -	ценовых,<br>
+                                -	общеэкономических. <br>
+                                -	стабильная сырьевая база.  <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений низкие.<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="a-row2">
+                        <th class="rating-cell rating-cell_left__info">АА+</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Очень высокий уровень геоэкономической эффективности и надежности с положительными тенденциями.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует<br>
+                                -	ведется освоение месторождения (-ий), <br>
+                                -	очень высокий уровень эконом. эффективности обеспечивающий поддержание кредитоспособности даже при условии появления рисков <br>
+                                -	геологических, <br>
+                                -	ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	стабильная сырьевая база.  <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений низкие.<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="a-row3">
+                        <th class="rating-cell rating-cell_left__info">АА</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Очень высокий уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует, имеет стабильную сырьевую базы и его эффективности достаточно для поддержания кредитоспособности даже при условии появления <br>
+                                -	ведется освоение месторождения (-ий), <br>
+                                -	очень высокий уровень эконом. эффективности обеспечивающий поддержание кредитоспособности даже при условии появления рисков <br>
+                                -	геологических, <br>
+                                -	ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	риски, которые заложены в инвестирование по разведке и разработке новых месторождений не могут быть оценены как несущественные.<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="a-row4">
+                        <th class="rating-cell rating-cell_left__info">АА-</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Высокий уровень геоэкономической эффективности и надежности, с отрицательными тенденциями.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует <br>
+                                -	ведется освоение месторождения, <br>
+                                -	очень высокий уровень эконом. эффективности обеспечивающий поддержание кредитоспособности даже при условии появления рисков <br>
+                                -	геологических, <br>
+                                -	но не ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	стабильная сырьевая база. <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений умеренные.<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="a-row5">
+                        <th class="rating-cell rating-cell_left__info">А+</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Высокий уровень геоэкономической эффективности и надежности с положительными тенденциями.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует <br>
+                                -	ведется освоение месторождения, <br>
+                                -	очень высокий уровень эконом. эффективности обеспечивающий поддержание кредитоспособности даже при условии появления рисков <br>
+                                -	но не геологических, <br>
+                                -	но не ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	не достаточно стабильная сырьевая база (запасы сокращаются, срок отработки запасов достаточно близок). <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений умеренные.<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="a-row6">
+                        <th class="rating-cell rating-cell_left__info">А</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Высокий уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует <br>
+                                -	ведется освоение месторождения, <br>
+                                -	высокий уровень эконом. эффективности для поддержания кредитоспособности даже при условии появления рисков <br>
+                                -	но не геологических, <br>
+                                -	но не ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	не достаточно стабильная сырьевая база (запасы сокращаются, срок отработки запасов достаточно близок). <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений существенные.<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="a-row7">
+                        <th class="rating-cell rating-cell_left__info">А-</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Высокий уровень геоэкономической эффективности и надежности, с отрицательными тенденциями.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует <br>
+                                -	ведется освоение месторождения, <br>
+                                -	достаточный уровень эконом. эффективности для поддержания кредитоспособности даже при условии появления рисков <br>
+                                -	но не геологических, <br>
+                                -	но не ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	не достаточно стабильная сырьевая база (запасы сокращаются, срок отработки запасов достаточно близок). <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений существенные.<br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="rating rating-tab" id="tab2">
+                <thead class="rating-body">
+                    <tr class="rating-item" id="title">
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#b-row1"><div class="rating-cell_select__item">BBB+</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#b-row2"><div class="rating-cell_select__item">BBB</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#b-row3"><div class="rating-cell_select__item">BBB-</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#b-row4"><div class="rating-cell_select__item">BB+</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#b-row5"><div class="rating-cell_select__item">BB</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#b-row6"><div class="rating-cell_select__item">BB-</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#b-row7"><div class="rating-cell_select__item">B+</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#row8"><div class="rating-cell_select__item">B</div></a>
+                        </td>
+                        <td class="rating-cell_select">
+                            <a href="ratings.html#b-row9"><div class="rating-cell_select__item">B-</div></a>
+                        </td>
+                        <td class="rating-cell_select rating-cell_select__item__last">
+                            <a href="ratings.html#b-seeall"><div class="rating-cell_select__item rating-cell_select__item__last">Показать все</div>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody class="rating-body" id="b-seeall">
+                    <tr class="rating-pitem" id="b-row1">
+                        <th class="rating-cell rating-cell_left__info">BBB+</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Умеренный уровень геоэкономической эффективности и надежности, с положительными тенденциями.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует<br>
+                                -	ведется освоение месторождения, <br>
+                                -	умеренный уровень эконом. эффективности для поддержания кредитоспособности даже при условии появления рисков <br>
+                                -	но не геологических, <br>
+                                -	но не ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	не достаточно стабильная сырьевая база (запасы сокращаются, срок отработки запасов достаточно близок). <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений существенные. <br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="b-row2">
+                        <th class="rating-cell rating-cell_left__info">BBB</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Умеренный уровень геоэкономической эффективности и надежности, с тенденциями.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует<br>
+                                -	ведется освоение месторождения, <br>
+                                -	умеренный уровень эконом. эффективности для поддержания кредитоспособности даже при условии появления рисков <br>
+                                -	но не геологических, <br>
+                                -	но не ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	не достаточно стабильная сырьевая база (запасы сокращаются, срок отработки запасов достаточно близок). <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений существенные. <br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="b-row3">
+                        <th class="rating-cell rating-cell_left__info">BBB-</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Умеренный уровень геоэкономической эффективности и надежности с отрицательными тенденциями.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует<br>
+                                -	ведется освоение месторождения, <br>
+                                -	умеренный уровень эконом. эффективности для поддержания кредитоспособности даже при условии появления рисков <br>
+                                -	но не геологических, <br>
+                                -	но не ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	не достаточно стабильная сырьевая база (запасы сокращаются, срок отработки запасов достаточно близок). <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений существенные. <br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="b-row4">
+                        <th class="rating-cell rating-cell_left__info">BB+</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Умеренный низкий уровень геоэкономической эффективности и надежности с отрицательными тенденциями.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует, но<br>
+                                -	не ведется освоение месторождения (-ий) (стадия строительства),  <br>
+                                -	прогнозируется эконом. эффективность для поддержания кредитоспособности даже при условии появления рисков  <br>
+                                -	но не геологических, <br>
+                                -	но не ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	достаточная сырьевая база <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений существенные. <br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="b-row5">
+                        <th class="rating-cell rating-cell_left__info">BB</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Умеренный низкий уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует, но<br>
+                                -	не ведется освоение месторождения (-ий) (стадия строительства),  <br>
+                                -	прогнозируется эконом. эффективность для поддержания кредитоспособности даже при условии появления рисков  <br>
+                                -	но не геологических, <br>
+                                -	но не ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	достаточная сырьевая база <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений существенные. <br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="b-row6">
+                        <th class="rating-cell rating-cell_left__info">BB-</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Умеренный низкий уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует, но<br>
+                                -	не ведется освоение месторождения (-ий) (стадия строительства),  <br>
+                                -	прогнозируется эконом. эффективность для поддержания кредитоспособности даже при условии появления рисков  <br>
+                                -	но не геологических, <br>
+                                -	но не ценовых,<br>
+                                -	но не общеэкономических. <br>
+                                -	достаточная сырьевая база <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений существенные. <br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="b-row7">
+                        <th class="rating-cell rating-cell_left__info">B+</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Низкий уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует, но<br>
+                                -	не ведется освоение месторождения (-ий) (стадия разведки или консервации месторождения),  <br>
+                                -	прогнозируется высокая эконом. эффективность для поддержания кредитоспособности даже при условии появления рисков   <br>
+                                -	геологических, <br>
+                                -	но не ценовых. <br>
+                                -	прогнозируется достаточная сырьевая база (относительно крупное месторождение) <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений высокие. <br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="b-row8">
+                        <th class="rating-cell rating-cell_left__info">B</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Низкий уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует, но<br>
+                                -	не ведется освоение месторождения (-ий) (стадия разведки или консервации месторождения),  <br>
+                                -	прогнозируется умеренная эконом. эффективность для поддержания кредитоспособности даже при условии появления рисков   <br>
+                                -	геологических, <br>
+                                -	но не ценовых. <br>
+                                -	прогнозируется достаточная сырьевая база (относительно крупное месторождение) <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений высокие. <br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="b-row9">
+                        <th class="rating-cell rating-cell_left__info">B-</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Низкий уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует, но<br>
+                                -	не ведется освоение месторождения (-ий) (стадия разведки или консервации месторождения),  <br>
+                                -	прогнозируется ограниченная сырьевая база (относительно крупное месторождение) <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений высокие. <br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="rating rating-tab" id="tab3">
+                <thead class="rating-body">
+                    <tr class="rating-item" id="title">
+                        <td class="rating-cell_select" colspan="2">
+                            <a href="ratings.html#c-row1"><div class="rating-cell_select__item">CCC</div></a>
+                        </td>
+                        <td class="rating-cell_select" colspan="2">
+                            <a href="ratings.html#c-row2"><div class="rating-cell_select__item">CC</div></a>
+                        </td>
+                        <td class="rating-cell_select" colspan="2">
+                            <a href="ratings.html#c-row3"><div class="rating-cell_select__item">C</div></a>
+                        </td>
+                        <td class="rating-cell_select rating-cell_select__item__last" colspan="4">
+                            <a href="ratings.html#c-seeall"><div class="rating-cell_select__item rating-cell_select__item__last">Показать все</div>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody class="rating-body" id="c-seeall">
+                    <tr class="rating-pitem" id="c-row1">
+                        <th class="rating-cell rating-cell_left__info">CCC</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Низкий уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует, но<br>
+                                -	не ведется освоение месторождения (-ий) (стадия поисков месторождения), <br>
+                                -	прогнозируется ограниченная сырьевая база (мелкое месторождение) <br>
+                                -	риски которые заложенные в инвестирование по разведке и разработке новых месторождений высокие.<br>
+                                -	сроки действия разрешений на проведение работ близки к завершению.<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="c-row2">
+                        <th class="rating-cell rating-cell_left__info">CC</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Низкий уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует, но<br>
+                                -	не ведется освоение месторождения (-ий) (стадия поисков месторождения), <br>
+                                -	отсутствует достоверный прогноз по сырьевой базе<br>
+                                -	сроки действия разрешений на проведение работ близки к завершению.<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="c-row3">
+                        <th class="rating-cell rating-cell_left__info">C</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Низкий уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует, но<br>
+                                -	не ведется освоение месторождения (-ий) (стадия поисков месторождения), <br>
+                                -	отсутствует достоверный прогноз по сырьевой базе<br>
+                                -	сроки действия разрешений на проведение работ близки к завершению.<br>
+                                -	завершаются сроки установленные для проведения основных работ (проектирование разведки, разведка, проектирование освоения, освоение).<br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="rating rating-tab" id="tab4">
+                <thead class="rating-body">
+                    <tr class="rating-item" id="title">
+                        <td class="rating-cell_select" colspan="2">
+                            <a href="ratings.html#d-row1"><div class="rating-cell_select__item">RD</div></a>
+                        </td>
+                        <td class="rating-cell_select" colspan="2">
+                            <a href="ratings.html#d-row2"><div class="rating-cell_select__item">SD</div></a>
+                        </td>
+                        <td class="rating-cell_select" colspan="2">
+                            <a href="ratings.html#d-row3"><div class="rating-cell_select__item">D</div></a>
+                        </td>
+                        <td class="rating-cell_select rating-cell_select__item__last" colspan="4">
+                            <a href="ratings.html#d-seeall"><div class="rating-cell_select__item rating-cell_select__item__last">Показать все</div>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody class="rating-body" id="d-seeall">
+                    <tr class="rating-pitem" id="d-row1">
+                        <th class="rating-cell rating-cell_left__info">RD</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Низкий уровень геоэкономической эффективности и надежности.</p>
+                            <p class="rating-info">
+                                Предприятие функционирует, но<br>
+                                -	не ведется освоение месторождения (-ий) (стадия поисков месторождения), <br>
+                                -	отсутствует достоверный прогноз по сырьевой базе <br>
+                                -	сроки действия разрешений на проведение работ близки к завершению<br>
+                                -	значительно просрочены  установленные   сроки основы работы (проектирование разведки, разведка, проектирование освоения, освоение)<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="d-row2">
+                        <th class="rating-cell rating-cell_left__info">SD</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">Дефолтный рейтинг недропользования.</p>
+                            <p class="rating-info">
+                                Предприятие не функционирует:<br>
+                                -	не ведется освоение месторождения (-ий), не ведется геол.изучение<br>
+                                -	отсутствует достоверный прогноз по сырьевой базе<br>
+                                -	просрочены сроки предписаний надзорных органов, касающиеся выполнения основных условий пользования недрами<br>
+                                -	просрочены сроки предписаний по результатам комиссий по рассмотрению вопросов о прекращении прав пользования недрами.<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="rating-pitem" id="d-row3">
+                        <th class="rating-cell rating-cell_left__info">D</th>
+                        <td class="rating-cell_info rating-cell_right" colspan="9">
+                            <p class="rating-title">У юридического лица или группы (холдинга) отозваны все лицензии, работы прекращены, имеется задолженность по рекультивации</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="modal-window" id='modal1'>
+            <div class="modal-window_title">Выберите рейтинг месторождения:</div>
+            <div class="modal-window_content">
+                <div class="checkbox">
+                    <input type="radio" name="option" id="check1" data-tab="tab1" checked>
+                    <label for="check1">Высокий</label>
+                </div>
+                <div class="checkbox">
+                    <input type="radio" name="option" id="check2" data-tab="tab2">
+                    <label for="check2">Умеренный</label>
+                </div>
+                <div class="checkbox">
+                    <input type="radio" name="option" id="check3" data-tab="tab3">
+                    <label for="check3">Низкий</label>
+                </div>
+                <div class="checkbox">
+                    <input type="radio" name="option" id="check4" data-tab="tab4">
+                    <label for="check4">Дефолтный</label>
+                </div>
+                <div class="button-wrap">
+                    <button class="button-item" onclick="showTab()">Применить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main container-4 hidden wrap">
+        <h1>Методология</h1>
+        <div class="main_info">
+            <p>Информационные возможности Недра-Эксперт позволяют вести автоматизированное и полуавтоматизированное наблюдение за пользователями недр в части получения ими лицензий, прекращения прав пользования недрам, начала и проведения работ по геологическому изучению и разведки, отработки месторождений и многим другим показателям активности и результатов. В основном при проведении мониторинга компаний применяется дистанционный метод наблюдения.</p>
+            <p>Недра-Эксперт оценивает актив (участок недр) компании и эффективность работы компании с данным активом, а также риски потери актива в случае нарушений условий лицензий.</p>
+            <p><strong>В расчете рейтинга участвуют:</strong></p>
+            <p>
+                -   сведения об проведенном геологическом изучении участка недр (наличие разного рода геологической информации - геологические отчеты, экспертизы, протоколы);<br>
+                -	условия и вид лицензии;<br>
+                -	результаты работ по данной лицензии, сроки, объемы и виды выполненных работ;<br>
+                -	степень ликвидности полезного ископаемого;<br>
+                -	вид участка недр, виды полезных ископаемых;<br>
+                -	географические условия;<br>
+                -	данные из СМИ;<br>
+                -	финансовая отчетность рейтингуемого лица.
+            </p>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="footer">
+    <div class="footer_item">
+        <div class="footer_item-column">
+            <ul class="footer_item-column-1">
+                <a href="index.html"><div class="main-logo"></div></a>
+                <li class="">
+                    <a href="search.html">Поиск участков</a>
+                </li>
+                <li class="">
+                    <a href="ratings.html">Рейтинги</a>
+                </li>
+                <li class="">
+                    <a href="wip.html">Аналитика</a>
+                </li>
+                <li class="">
+                    <a href="minerals.html">Справочники</a>
+                </li>
+                <li class="">
+                    <a href="confidential.html">Политика конфиденциальности</a>
+                </li>
+                <li class="copyright">
+                    © 2018 Nedra-Expert
+                </li>
+            </ul>
+        </div>
+        <div class="footer_item-column">
+            <ul class="footer_item-column-3">
+                <li class="">
+                    <a href="http://nedraexpert.ru/about-us">О нас</a>
+                </li>
+                <li class="">
+                    <a href="contacts.html">Контакты</a>
+                </li>
+                <li class="">
+                    <a href="offer.html">Пользовательское соглашение</a>
+                </li>
+                <li class="li-text-color">
+                    <a href="tel:+74951158916">+7 (495) 115-8916</a>
+                </li>
+                <li class="li-text-color">
+                    <a href="mailto:info@nedraexpert.ru">info@nedraexpert.ru</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_item-column">
+            <ul class="footer_item-column-3">
+    <li class="li-text-color">
+        <a href="http://nedraexpert.ru/Account/Login?returnUrl=%2Fratings">Вход</a>
+    </li>
+                <li class="li-text-color">
+                    <a href="Account/Register.html">Регистрация</a>
+                </li>            </ul>
+        </div>
+        <div class="footer_item-column footer_item-column-4">
+            <p>Разработано в «Роскомпьютинг»</p>
+            <a href="http://www.roscomputing.com/ru/Main.aspx" target="_blank">
+                <img src="img/rc_logo.png" title="RosComputing">
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+    <script src="js/jquery.min..js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="Bundles/js%3Fv=U1nUYuHqa_IdfHoY4JnsdJcHhydBMzXHf00tchZcrz41"></script>
+
+    <script type="text/javascript">
+        globalVars.consts.AbsoluteUri = 'http://nedraexpert.ru';
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#logOff").click(function () {
+                window.location.href = '/Account/LogOff';
+                return false;
+                $.ajax({
+                    url: "/Account/LogOff",
+                    type: "POST",
+                    success: function (result) {
+                        window.location.href = '/Account/Login';
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter41614544 = new Ya.Metrika({
+                        id: 41614544,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true
+                    });
+                } catch (e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/41614544" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- / -->
+    <!-- Google.Analytics counter -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-84813725-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- BEGIN JIVOSITE CODE {literal} -->
+    <script type='text/javascript'>
+        (function(){ var widget_id = 'UObduQg01H';var d=document;var w=window;function l(){
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
+    <!-- {/literal} END JIVOSITE CODE -->
+    
+    <script>
+        ;(function ($D) {
+            var $button1 = $D.querySelector('.button-1'),
+                $container1 = $D.querySelector('.container-1'),
+                $button2 = $D.querySelector('.button-2'),
+                $container2 = $D.querySelector('.container-2'),
+                $button3 = $D.querySelector('.button-3'),
+                $container3 = $D.querySelector('.container-3'),
+                $button4 = $D.querySelector('.button-4'),
+                $container4 = $D.querySelector('.container-4');
+
+            $container1.style.display = 'block';
+            $button1.style.color = '#c2d0e1';
+
+            $button1.addEventListener('click', function (e) {
+                $container1.style.display = 'block';
+                $container2.style.display = 'none';
+                $container3.style.display = 'none';
+                $container4.style.display = 'none';
+                $button1.style.color = '#c2d0e1';
+            });
+
+            $button2.addEventListener('click', function (e) {
+                $container1.style.display = 'none';
+                $container3.style.display = 'none';
+                $container4.style.display = 'none';
+                $container2.style.display = 'block';
+                $button1.style.color = '#fff';
+            });
+            $button3.addEventListener('click', function (e) {
+                $container1.style.display = 'none';
+                $container2.style.display = 'none';
+                $container4.style.display = 'none';
+                $container3.style.display = 'block';
+                $button1.style.color = '#fff';
+            });
+            $button4.addEventListener('click', function (e) {
+                $container1.style.display = 'none';
+                $container2.style.display = 'none';
+                $container3.style.display = 'none';
+                $container4.style.display = 'block';
+                $button1.style.color = '#fff';
+            });
+        })(document);
+
+        document.querySelector('.modal-window').style.display = 'none';
+
+        function showModal() {
+            var modal = document.querySelector('.modal-window');
+            modal.style.display = '';
+        }
+
+        function showTab() {
+            var article = document.querySelector('.checkbox input:checked'),
+                tabs = document.querySelectorAll('.rating-tab'),
+                data = article.dataset;
+
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList = "rating rating-tab";
+            }
+
+            document.getElementById(data.tab).classList = "rating rating-tab active";
+            document.querySelector('.modal-window').style.display = 'none';
+        }
+
+        function applyFilter() {
+            var rows = document.querySelectorAll('.rating-pitem'),
+                linkRows = document.querySelectorAll('.rating-cell_select a'),
+                attr = this.getAttribute("href").replace("#", "");
+            console.log(linkRows);
+
+            for (var j = 0; j < linkRows.length; j++) {
+                console.log(linkRows[j]);
+                linkRows[j].className = '';
+            }
+
+            this.classList = "active";
+
+            if ((attr === "a-seeall") || (attr === "b-seeall") || (attr === "c-seeall") || (attr === "d-seeall")) {
+                for (var i = 0; i < rows.length; i++) {
+                    rows[i].style.display = '';
+                }
+            } else {
+                for (var i = 0; i < rows.length; i++) {
+                    rows[i].style.display = 'none';
+                }
+                document.getElementById(attr).style.display = '';
+            }
+        }
+
+        var filters = document.querySelectorAll('.rating-cell_select a');
+        for (var i = 0; i < filters.length; i++) {
+            filters[i].addEventListener('click', applyFilter, false);
+        }
+
+        function changeClass() {
+            var links = document.querySelectorAll('a')
+            for (var i = 0; i < links.length; i++) {
+                links[i].className = "";
+            }
+
+            this.className = "active";
+        }
+
+        var el = document.querySelectorAll('.rating-pitem a');
+        for (var i = 0; i < el.length; i++) {
+            el[i].addEventListener('click', changeClass, false);
+        }
+    </script>
+
+</body>
+</html>

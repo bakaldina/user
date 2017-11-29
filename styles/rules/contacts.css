@@ -1,0 +1,60 @@
+﻿
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #f8f8f8 !important;
+    font-family: 'PT Sans',Arial,sans-serif !important;
+    font-size: 16px !important;
+    color: #000 !important;
+}
+
+ /* Мэйн */
+.main {
+    width: 100%;
+    max-width: 1160px;
+    min-height: 700px;
+    box-shadow: 0 0 11px 1px grey;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+.contacts {
+    font-size: 16px;
+    color: #333;
+    padding: 40px;
+    padding-left: 110px;
+}
+.main h1 {
+    color: #000;
+    font-size: 22px;
+}
+.main_adress img {
+    width: 35px;
+    height: 25px;
+    padding-right: 10px;
+}
+.tax_requisites {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.grey-color {
+    color: #999;
+    padding-right: 5px;
+}
+.bank_requisites {
+    color: #666;
+    font-weight: bold;
+}
+.bank_requisites__title {
+    color: #C78D2E;
+}
+.contacts_item a {
+    text-decoration: none;
+}
+#map {
+    margin: auto;
+    max-width: 1358px;
+    margin-bottom: 50px;
+}

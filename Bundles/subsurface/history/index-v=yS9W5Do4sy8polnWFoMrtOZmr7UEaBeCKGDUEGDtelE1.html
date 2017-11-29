@@ -1,0 +1,2 @@
+$(document).ready(function(){$("#selectType").bind("click",function(){$("#events_list").fadeToggle("fast")});$("#events_list button").bind("click",function(){var n=$(this).attr("data-id");n?($(".history-list-item").hide(),$(".history-list-item.item-"+n).show()):$(".history-list-item").show();$("#events_list button").removeClass("selected");$(this).addClass("selected");$("#events_list").fadeToggle("fast");$("#selectType").text($(this).text())})})
+<!-- Localized -->
